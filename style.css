@@ -1,5 +1,5 @@
 body {
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Montserrat', sans-serif;
 margin: 0;
 padding: 20px;
 background: #f9f4eb;
@@ -19,7 +19,7 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 1.5rem;
+gap: 0.8rem;
 }
 
 .header-text {
@@ -37,9 +37,24 @@ letter-spacing: 2px;
 }
 
 .header-text p {
-font-size: 1.3rem;
-margin: 8px 0 0;
+font-family: 'Bebas Neue', sans-serif;
+font-size: 1.45rem;
+margin: 0;
 color: #444;
+letter-spacing: 1px;
+}
+
+h2 {
+font-family: 'Bebas Neue', sans-serif;
+font-size: 2.4rem;
+color: #2c3e2c;
+margin-top: 2rem;
+margin-bottom: 1rem;
+}
+
+/* Regular body text uses Montserrat */
+p, li {
+font-family: 'Montserrat', sans-serif;
 }
 
 .logo-container {
@@ -53,7 +68,6 @@ display: block;
 margin: 0 auto;
 }
 
-/* Rest of your styles */
 .plant-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -89,7 +103,7 @@ color: #666;
 font-size: 0.9rem;
 }
 
-/* Make it nicer on bigger screens */
+/* Mobile adjustments */
 @media (min-width: 768px) {
 .header-content {
 flex-direction: row;
