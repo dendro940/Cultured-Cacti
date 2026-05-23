@@ -5,15 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Order Form - Cultured Cacti</title>
 <style>
-body { font-family: 'Montserrat', sans-serif; margin: 40px; line-height: 1.6; }
-h1 { font-family: 'Bebas Neue', sans-serif; text-align: center; color: #2c3e2c; }
-.form-section { margin: 30px 0; }
-label { display: block; margin: 12px 0 6px; font-weight: bold; }
+body {
+font-family: 'Montserrat', sans-serif;
+margin: 40px;
+line-height: 1.6;
+max-width: 800px;
+margin: 40px auto;
+}
+header { text-align: center; margin-bottom: 30px; }
+h1 {
+font-family: 'Bebas Neue', sans-serif;
+color: #2c3e2c;
+margin: 0;
+}
+.tagline { font-size: 1.3rem; margin: 8px 0 20px; }
+.logo { max-width: 280px; margin: 15px auto; display: block; }
+label { display: block; margin: 15px 0 6px; font-weight: bold; }
 input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; }
 table { width: 100%; border-collapse: collapse; margin: 25px 0; }
 th, td { border: 1px solid #555; padding: 10px; text-align: left; }
 th { background-color: #f0f0f0; }
-.totals { font-weight: bold; }
 .print-button { text-align: center; margin: 40px 0; }
 @media print {
 .print-button, nav { display: none; }
@@ -22,8 +33,15 @@ body { margin: 20px; }
 </style>
 </head>
 <body>
-<h1>Cultured Cacti Order Form</h1>
-<p style="text-align:center;">Sierra Foothills, California • Email completed form to orders@culturedcacti.com</p>
+<header>
+<img src="images/logo.svg" alt="Cultured Cacti Logo" class="logo">
+<h1>CULTURED CACTI</h1>
+<p class="tagline">Sierra Foothills • California</p>
+<p><strong>orders@culturedcacti.com</strong><br>
+P.O. Box 141, Browns Valley, CA 95918 USA</p>
+</header>
+
+<h2 style="text-align:center;">Order Form</h2>
 
 <div class="form-section">
 <label>Date:</label>
@@ -42,7 +60,7 @@ body { margin: 20px; }
 </div>
 
 <div class="form-section">
-<h2>Plant Order</h2>
+<h2>Items Ordered</h2>
 <table>
 <tr>
 <th>Item #</th>
@@ -60,7 +78,9 @@ body { margin: 20px; }
 </div>
 
 <div class="form-section">
-<p><strong>Shipping & Handling:</strong> $10 for the first plant + $2 for each additional plant.</p>
+<p><strong>Shipping &amp; Handling:</strong><br>
+Plants: $10 for the first plant + $2 for each additional plant.<br>
+Seeds: $5 or FREE when shipped with plants.</p>
 </div>
 
 <div class="form-section">
@@ -70,7 +90,7 @@ body { margin: 20px; }
 <td>$________</td>
 </tr>
 <tr class="totals">
-<td colspan="4" style="text-align:right;">Shipping & Handling</td>
+<td colspan="4" style="text-align:right;">Shipping &amp; Handling</td>
 <td>$________</td>
 </tr>
 <tr class="totals">
@@ -84,12 +104,19 @@ body { margin: 20px; }
 </table>
 </div>
 
+<div class="form-section">
+<p><strong>Payment:</strong> Please mail your order with cash, check, or money order made payable to <strong>A. Thurman</strong> to:<br><br>
+A. Thurman<br>
+P.O. Box 141<br>
+Browns Valley, CA 95918 USA</p>
+</div>
+
 <div class="print-button">
 <button onclick="window.print()" style="padding:12px 30px; font-size:1.1rem;">🖨️ Print This Order Form</button>
 </div>
 
 <p style="text-align:center; margin-top:40px;">
-Thank you! We will confirm availability, final price, and shipping details after receiving your order.
+Thank you! We will confirm availability, final pricing, and shipping details after receiving your order.
 </p>
 </body>
 </html>
