@@ -13,15 +13,16 @@ max-width: 1000px;
 line-height: 1.6;
 color: #222;
 }
-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
-.logo { max-width: 220px; }
-h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; margin: 0; color: #2c3e2c; }
-.address { margin-top: 10px; font-size: 1.1rem; }
-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
-th, td { border: 1px solid #444; padding: 10px; text-align: left; }
-th { background-color: #f4f4f4; font-weight: bold; }
-.totals td { font-weight: bold; }
-.print-btn { text-align: center; margin: 40px 0; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+.title { font-family: 'Bebas Neue', sans-serif; font-size: 3.8rem; margin: 0; color: #1a1a1a; }
+.logo { max-width: 260px; }
+.address { margin-top: 12px; font-size: 1.15rem; }
+h2 { text-align: center; margin: 25px 0 12px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { border: 1px solid #333; padding: 12px 10px; text-align: left; vertical-align: top; }
+th { background-color: #f5f5f5; font-weight: 600; }
+.customer-table td { padding: 14px 10px; }
+.print-btn { text-align: center; margin: 50px 0 30px; }
 @media print {
 .print-btn { display: none; }
 body { margin: 20px; }
@@ -29,38 +30,36 @@ body { margin: 20px; }
 </style>
 </head>
 <body>
-<header>
+<div class="header">
 <div>
-<h1>ORDER FORM</h1>
+<h1 class="title">ORDER FORM</h1>
 <div class="address">
 <strong>CULTURED CACTI</strong><br>
 P.O. BOX 141, BROWNS VALLEY, CA 95918
 </div>
 </div>
 <img src="images/logo.svg" alt="Cultured Cacti Logo" class="logo">
-</header>
+</div>
 
-<h2 style="text-align:center; margin:30px 0 15px;">CUSTOMER INFORMATION</h2>
-
-<table>
+<h2>CUSTOMER INFORMATION</h2>
+<table class="customer-table">
 <tr>
 <td><strong>Name:</strong></td>
-<td colspan="4"></td>
+<td colspan="3"></td>
 </tr>
 <tr>
 <td><strong>Address:</strong></td>
-<td colspan="4"></td>
+<td colspan="3"></td>
 </tr>
 <tr>
 <td><strong>Phone:</strong></td>
 <td></td>
 <td><strong>Email:</strong></td>
-<td colspan="2"></td>
+<td></td>
 </tr>
 </table>
 
-<h2 style="text-align:center; margin:30px 0 15px;">ORDER DETAILS</h2>
-
+<h2>ORDER DETAILS</h2>
 <table>
 <thead>
 <tr>
@@ -72,6 +71,17 @@ P.O. BOX 141, BROWNS VALLEY, CA 95918
 </tr>
 </thead>
 <tbody>
+<!-- 20 blank rows to match your PDF -->
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -89,41 +99,29 @@ P.O. BOX 141, BROWNS VALLEY, CA 95918
 $10 for first plant + $2 for each additional plant<br>
 $5 for seeds or FREE when shipped with plants</p>
 
-<p><strong>Payment:</strong> Please mail your order with cash, check, or money order made payable to <strong>A. Thurman</strong> to:<br><br>
+<p><strong>Payment:</strong><br>
+Please mail your order with cash, check, or money order made payable to <strong>A. Thurman</strong> to:<br><br>
 A. Thurman<br>
 P.O. Box 141, Browns Valley, CA 95918</p>
 
-<table style="margin-top:30px;">
-<tr class="totals">
-<td colspan="4" style="text-align:right;">SUBTOTAL</td>
-<td></td>
-</tr>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">DISCOUNT</td>
-<td></td>
-</tr>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">TAX</td>
-<td></td>
-</tr>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">SHIPPING</td>
-<td></td>
-</tr>
-<tr class="totals" style="background:#f9f4eb;">
-<td colspan="4" style="text-align:right;"><strong>TOTAL</strong></td>
-<td><strong></strong></td>
-</tr>
+<table style="margin-top: 40px; width: 420px; float: right; border: 1px solid #333;">
+<tr><td style="text-align:right;">SUBTOTAL</td><td></td></tr>
+<tr><td style="text-align:right;">DISCOUNT</td><td></td></tr>
+<tr><td style="text-align:right;">TAX</td><td></td></tr>
+<tr><td style="text-align:right;">SHIPPING</td><td></td></tr>
+<tr style="background:#f9f4eb;"><td style="text-align:right;"><strong>TOTAL</strong></td><td><strong></strong></td></tr>
 </table>
 
+<div style="clear: both;"></div>
+
 <div class="print-btn">
-<button onclick="window.print()" style="padding:15px 40px; font-size:1.2rem; background:#2e8b2e; color:white; border:none; border-radius:8px; cursor:pointer;">
+<button onclick="window.print()" style="padding: 16px 40px; font-size: 1.2rem; background: #2e8b2e; color: white; border: none; border-radius: 8px; cursor: pointer;">
 🖨️ Print Order Form
 </button>
 </div>
 
-<p style="text-align:center; margin-top:40px; font-size:0.95rem;">
-Thank you for your order! We will confirm availability and final pricing.
+<p style="text-align: center; margin-top: 60px; font-size: 1rem;">
+THANK YOU FOR YOUR ORDER!
 </p>
 </body>
 </html>
