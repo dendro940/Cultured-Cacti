@@ -5,118 +5,125 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Order Form - Cultured Cacti</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500&display=swap');
 body {
 font-family: 'Montserrat', sans-serif;
-margin: 40px;
-line-height: 1.6;
-max-width: 800px;
 margin: 40px auto;
+max-width: 1000px;
+line-height: 1.6;
+color: #222;
 }
-header { text-align: center; margin-bottom: 30px; }
-h1 {
-font-family: 'Bebas Neue', sans-serif;
-color: #2c3e2c;
-margin: 0;
-}
-.tagline { font-size: 1.3rem; margin: 8px 0 20px; }
-.logo { max-width: 280px; margin: 15px auto; display: block; }
-label { display: block; margin: 15px 0 6px; font-weight: bold; }
-input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; }
+header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+.logo { max-width: 220px; }
+h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; margin: 0; color: #2c3e2c; }
+.address { margin-top: 10px; font-size: 1.1rem; }
 table { width: 100%; border-collapse: collapse; margin: 25px 0; }
-th, td { border: 1px solid #555; padding: 10px; text-align: left; }
-th { background-color: #f0f0f0; }
-.print-button { text-align: center; margin: 40px 0; }
+th, td { border: 1px solid #444; padding: 10px; text-align: left; }
+th { background-color: #f4f4f4; font-weight: bold; }
+.totals td { font-weight: bold; }
+.print-btn { text-align: center; margin: 40px 0; }
 @media print {
-.print-button, nav { display: none; }
+.print-btn { display: none; }
 body { margin: 20px; }
 }
 </style>
 </head>
 <body>
 <header>
+<div>
+<h1>ORDER FORM</h1>
+<div class="address">
+<strong>CULTURED CACTI</strong><br>
+P.O. BOX 141, BROWNS VALLEY, CA 95918
+</div>
+</div>
 <img src="images/logo.svg" alt="Cultured Cacti Logo" class="logo">
-<h1>CULTURED CACTI</h1>
-<p class="tagline">Sierra Foothills • California</p>
-<p><strong>orders@culturedcacti.com</strong><br>
-P.O. Box 141, Browns Valley, CA 95918 USA</p>
 </header>
 
-<h2 style="text-align:center;">Order Form</h2>
+<h2 style="text-align:center; margin:30px 0 15px;">CUSTOMER INFORMATION</h2>
 
-<div class="form-section">
-<label>Date:</label>
-<input type="text" value="________________________">
-</div>
-
-<div class="form-section">
-<label>Ship To Address:</label>
-<textarea rows="5"></textarea>
-
-<label>Email Address:</label>
-<input type="email">
-
-<label>Phone Number:</label>
-<input type="tel">
-</div>
-
-<div class="form-section">
-<h2>Items Ordered</h2>
 <table>
 <tr>
-<th>Item #</th>
-<th>Description (Plant Name / Variety)</th>
-<th>Quantity</th>
-<th>Price Each</th>
-<th>Total</th>
+<td><strong>Name:</strong></td>
+<td colspan="4"></td>
 </tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr>
+<td><strong>Address:</strong></td>
+<td colspan="4"></td>
+</tr>
+<tr>
+<td><strong>Phone:</strong></td>
+<td></td>
+<td><strong>Email:</strong></td>
+<td colspan="2"></td>
+</tr>
 </table>
-</div>
 
-<div class="form-section">
-<p><strong>Shipping &amp; Handling:</strong><br>
-Plants: $10 for the first plant + $2 for each additional plant.<br>
-Seeds: $5 or FREE when shipped with plants.</p>
-</div>
+<h2 style="text-align:center; margin:30px 0 15px;">ORDER DETAILS</h2>
 
-<div class="form-section">
 <table>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">Subtotal</td>
-<td>$________</td>
+<thead>
+<tr>
+<th>ITEM</th>
+<th>DESCRIPTION</th>
+<th>QUANTITY</th>
+<th>PRICE</th>
+<th>AMOUNT</th>
 </tr>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">Shipping &amp; Handling</td>
-<td>$________</td>
-</tr>
-<tr class="totals">
-<td colspan="4" style="text-align:right;">CA Residents add 7.25% Sales Tax</td>
-<td>$________</td>
-</tr>
-<tr class="totals" style="background-color:#f0f0f0;">
-<td colspan="4" style="text-align:right;"><strong>GRAND TOTAL</strong></td>
-<td><strong>$________</strong></td>
-</tr>
+</thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
 </table>
-</div>
 
-<div class="form-section">
+<p><strong>Shipping and handling: US only</strong><br>
+$10 for first plant + $2 for each additional plant<br>
+$5 for seeds or FREE when shipped with plants</p>
+
 <p><strong>Payment:</strong> Please mail your order with cash, check, or money order made payable to <strong>A. Thurman</strong> to:<br><br>
 A. Thurman<br>
-P.O. Box 141<br>
-Browns Valley, CA 95918 USA</p>
+P.O. Box 141, Browns Valley, CA 95918</p>
+
+<table style="margin-top:30px;">
+<tr class="totals">
+<td colspan="4" style="text-align:right;">SUBTOTAL</td>
+<td></td>
+</tr>
+<tr class="totals">
+<td colspan="4" style="text-align:right;">DISCOUNT</td>
+<td></td>
+</tr>
+<tr class="totals">
+<td colspan="4" style="text-align:right;">TAX</td>
+<td></td>
+</tr>
+<tr class="totals">
+<td colspan="4" style="text-align:right;">SHIPPING</td>
+<td></td>
+</tr>
+<tr class="totals" style="background:#f9f4eb;">
+<td colspan="4" style="text-align:right;"><strong>TOTAL</strong></td>
+<td><strong></strong></td>
+</tr>
+</table>
+
+<div class="print-btn">
+<button onclick="window.print()" style="padding:15px 40px; font-size:1.2rem; background:#2e8b2e; color:white; border:none; border-radius:8px; cursor:pointer;">
+🖨️ Print Order Form
+</button>
 </div>
 
-<div class="print-button">
-<button onclick="window.print()" style="padding:12px 30px; font-size:1.1rem;">🖨️ Print This Order Form</button>
-</div>
-
-<p style="text-align:center; margin-top:40px;">
-Thank you! We will confirm availability, final pricing, and shipping details after receiving your order.
+<p style="text-align:center; margin-top:40px; font-size:0.95rem;">
+Thank you for your order! We will confirm availability and final pricing.
 </p>
 </body>
 </html>
